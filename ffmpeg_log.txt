@@ -1,0 +1,192 @@
+PS C:\Users\0000134488\workspace\cv2_timeline> python .\cv2Timeline.py
+ffmpeg version 4.1 Copyright (c) 2000-2018 the FFmpeg developers
+  built with gcc 8.2.1 (GCC) 20181017
+  configuration: --disable-static --enable-shared --enable-gpl --enable-version3 --enable-sdl2 --enable-fontconfig --enable-gnutls --enable-iconv --enable-libass
+--enable-libbluray --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libopus --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libtheora --enable-libtwolame --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libzimg --enable-lzma --enable-zlib --enable-gmp --enable-libvidstab --enable-libvorbis --enable-libvo-amrwbenc --enable-libmysofa --enable-libspeex --enable-libxvid --enable-libaom --enable-libmfx --enable-amf --enable-ffnvcodec --enable-cuvid --enable-d3d11va --enable-nvenc --enable-nvdec --enable-dxva2 --enable-avisynth
+  libavutil      56. 22.100 / 56. 22.100
+  libavcodec     58. 35.100 / 58. 35.100
+  libavformat    58. 20.100 / 58. 20.100
+  libavdevice    58.  5.100 / 58.  5.100
+  libavfilter     7. 40.101 /  7. 40.101
+  libswscale      5.  3.100 /  5.  3.100
+  libswresample   3.  3.100 /  3.  3.100
+  libpostproc    55.  3.100 / 55.  3.100
+Guessed Channel Layout for Input Stream #0.1 : stereo
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'GreenBackCat.mov':
+  Metadata:
+    major_brand     : qt
+    minor_version   : 512
+    compatible_brands: qt
+    encoder         : Lavf57.25.100
+  Duration: 00:00:04.96, start: 0.000000, bitrate: 4648 kb/s
+    Stream #0:0(eng): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(bt709), 1920x1080, 3106 kb/s, SAR 1:1 DAR 16:9, 23.98 fps, 23.98 tbr, 24k tbn, 47.95 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      timecode        : 01:00:00:00
+    Stream #0:1(eng): Audio: pcm_s16le (lpcm / 0x6D63706C), 48000 Hz, stereo, s16, 1536 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+    Stream #0:2(eng): Data: none (tmcd / 0x64636D74), 0 kb/s
+    Metadata:
+      handler_name    : TimeCodeHandler
+      timecode        : 01:00:00:00
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0000022b6cd3a3c0] deprecated pixel format used, make sure you did set range correctly
+Output #0, image2, to '%05d.jpg':
+  Metadata:
+    major_brand     : qt
+    minor_version   : 512
+    compatible_brands: qt
+    encoder         : Lavf58.20.100
+    Stream #0:0(eng): Video: mjpeg, yuvj420p(pc), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 5 fps, 5 tbn, 5 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      timecode        : 01:00:00:00
+      encoder         : Lavc58.35.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: -1
+frame=   26 fps= 13 q=24.8 Lsize=N/A time=00:00:05.20 bitrate=N/A dup=0 drop=93 speed=2.69x
+video:671kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+
+
+PS C:\Users\0000134488\workspace\cv2_timeline> ffmpeg.exe -i .\GreenBackCat.mov -vcodec png image_%03d.png
+ffmpeg version N-92673-g876ed08b0d Copyright (c) 2000-2018 the FFmpeg developers
+  built with gcc 8.2.1 (GCC) 20181201
+  configuration: --enable-gpl --enable-version3 --enable-sdl2 --enable-fontconfig --enable-gnutls --enable-iconv --enable-libass --enable-libbluray --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libopus --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libtheora --enable-libtwolame --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libzimg --enable-lzma --enable-zlib --enable-gmp --enable-libvidstab --enable-libvorbis --enable-libvo-amrwbenc --enable-libmysofa --enable-libspeex --enable-libxvid --enable-libaom --enable-libmfx --enable-amf --enable-ffnvcodec --enable-cuvid --enable-d3d11va --enable-nvenc --enable-nvdec --enable-dxva2 --enable-avisynth --enable-libopenmpt
+  libavutil      56. 24.101 / 56. 24.101
+  libavcodec     58. 42.100 / 58. 42.100
+  libavformat    58. 24.100 / 58. 24.100
+  libavdevice    58.  6.101 / 58.  6.101
+  libavfilter     7. 46.101 /  7. 46.101
+  libswscale      5.  4.100 /  5.  4.100
+  libswresample   3.  4.100 /  3.  4.100
+  libpostproc    55.  4.100 / 55.  4.100
+Guessed Channel Layout for Input Stream #0.1 : stereo
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '.\GreenBackCat.mov':
+  Metadata:
+    major_brand     : qt
+    minor_version   : 512
+    compatible_brands: qt
+    encoder         : Lavf57.25.100
+  Duration: 00:00:04.96, start: 0.000000, bitrate: 4648 kb/s
+    Stream #0:0(eng): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(bt709), 1920x1080, 3106 kb/s, SAR 1:1 DAR 16:9, 23.98 fps, 23.98 tbr, 24k tbn, 47.95 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      timecode        : 01:00:00:00
+    Stream #0:1(eng): Audio: pcm_s16le (lpcm / 0x6D63706C), 48000 Hz, stereo, s16, 1536 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+    Stream #0:2(eng): Data: none (tmcd / 0x64636D74), 0 kb/s
+    Metadata:
+      handler_name    : TimeCodeHandler
+      timecode        : 01:00:00:00
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> png (native))
+Press [q] to stop, [?] for help
+Output #0, image2, to 'image_%03d.png':
+  Metadata:
+    major_brand     : qt
+    minor_version   : 512
+    compatible_brands: qt
+    encoder         : Lavf58.24.100
+    Stream #0:0(eng): Video: png, rgb24, 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 23.98 fps, 23.98 tbn, 23.98 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      timecode        : 01:00:00:00
+      encoder         : Lavc58.42.100 png
+frame=  119 fps=7.6 q=-0.0 Lsize=N/A time=00:00:04.96 bitrate=N/A speed=0.316x
+video:49751kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+
+PS C:\Users\0000134488\workspace\cv2_timeline> python .\cv2Timeline.py
+ffmpeg version 4.1 Copyright (c) 2000-2018 the FFmpeg developers
+  built with gcc 8.2.1 (GCC) 20181017
+  configuration: --disable-static --enable-shared --enable-gpl --enable-version3 --enable-sdl2 --enable-fontconfig --enable-gnutls --enable-iconv --enable-libass
+--enable-libbluray --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libopus --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libtheora --enable-libtwolame --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libzimg --enable-lzma --enable-zlib --enable-gmp --enable-libvidstab --enable-libvorbis --enable-libvo-amrwbenc --enable-libmysofa --enable-libspeex --enable-libxvid --enable-libaom --enable-libmfx --enable-amf --enable-ffnvcodec --enable-cuvid --enable-d3d11va --enable-nvenc --enable-nvdec --enable-dxva2 --enable-avisynth
+  libavutil      56. 22.100 / 56. 22.100
+  libavcodec     58. 35.100 / 58. 35.100
+  libavformat    58. 20.100 / 58. 20.100
+  libavdevice    58.  5.100 / 58.  5.100
+  libavfilter     7. 40.101 /  7. 40.101
+  libswscale      5.  3.100 /  5.  3.100
+  libswresample   3.  3.100 /  3.  3.100
+  libpostproc    55.  3.100 / 55.  3.100
+Guessed Channel Layout for Input Stream #0.1 : stereo
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'GreenBackCat.mov':
+  Metadata:
+    major_brand     : qt
+    minor_version   : 512
+    compatible_brands: qt
+    encoder         : Lavf57.25.100
+  Duration: 00:00:04.96, start: 0.000000, bitrate: 4648 kb/s
+    Stream #0:0(eng): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(bt709), 1920x1080, 3106 kb/s, SAR 1:1 DAR 16:9, 23.98 fps, 23.98 tbr, 24k tbn, 47.95 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      timecode        : 01:00:00:00
+    Stream #0:1(eng): Audio: pcm_s16le (lpcm / 0x6D63706C), 48000 Hz, stereo, s16, 1536 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+    Stream #0:2(eng): Data: none (tmcd / 0x64636D74), 0 kb/s
+    Metadata:
+      handler_name    : TimeCodeHandler
+      timecode        : 01:00:00:00
+[NULL @ 0000023543d04a40] Requested output format 'png' is not a suitable output format
+pipe:: Invalid argument
+Traceback (most recent call last):
+  File ".\cv2Timeline.py", line 127, in <module>
+    ffmpeg_movie()
+  File ".\cv2Timeline.py", line 72, in ffmpeg_movie
+    .run(capture_stdout=True)
+  File "C:\Users\0000134488\AppData\Local\Continuum\anaconda3\lib\site-packages\ffmpeg\_run.py", line 212, in run
+    raise Error('ffmpeg', out, err)
+ffmpeg._run.Error: ffmpeg error (see stderr output for detail)
+PS C:\Users\0000134488\workspace\cv2_timeline> python .\cv2Timeline.py
+ffmpeg version 4.1 Copyright (c) 2000-2018 the FFmpeg developers
+  built with gcc 8.2.1 (GCC) 20181017
+  configuration: --disable-static --enable-shared --enable-gpl --enable-version3 --enable-sdl2 --enable-fontconfig --enable-gnutls --enable-iconv --enable-libass
+--enable-libbluray --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libopus --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libtheora --enable-libtwolame --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libzimg --enable-lzma --enable-zlib --enable-gmp --enable-libvidstab --enable-libvorbis --enable-libvo-amrwbenc --enable-libmysofa --enable-libspeex --enable-libxvid --enable-libaom --enable-libmfx --enable-amf --enable-ffnvcodec --enable-cuvid --enable-d3d11va --enable-nvenc --enable-nvdec --enable-dxva2 --enable-avisynth
+  libavutil      56. 22.100 / 56. 22.100
+  libavcodec     58. 35.100 / 58. 35.100
+  libavformat    58. 20.100 / 58. 20.100
+  libavdevice    58.  5.100 / 58.  5.100
+  libavfilter     7. 40.101 /  7. 40.101
+  libswscale      5.  3.100 /  5.  3.100
+  libswresample   3.  3.100 /  3.  3.100
+  libpostproc    55.  3.100 / 55.  3.100
+Guessed Channel Layout for Input Stream #0.1 : stereo
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'GreenBackCat.mov':
+  Metadata:
+    major_brand     : qt
+    minor_version   : 512
+    compatible_brands: qt
+    encoder         : Lavf57.25.100
+  Duration: 00:00:04.96, start: 0.000000, bitrate: 4648 kb/s
+    Stream #0:0(eng): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(bt709), 1920x1080, 3106 kb/s, SAR 1:1 DAR 16:9, 23.98 fps, 23.98 tbr, 24k tbn, 47.95 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      timecode        : 01:00:00:00
+    Stream #0:1(eng): Audio: pcm_s16le (lpcm / 0x6D63706C), 48000 Hz, stereo, s16, 1536 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+    Stream #0:2(eng): Data: none (tmcd / 0x64636D74), 0 kb/s
+    Metadata:
+      handler_name    : TimeCodeHandler
+      timecode        : 01:00:00:00
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> rawvideo (native))
+Press [q] to stop, [?] for help
+Output #0, rawvideo, to 'pipe:':
+  Metadata:
+    major_brand     : qt
+    minor_version   : 512
+    compatible_brands: qt
+    encoder         : Lavf58.20.100
+    Stream #0:0(eng): Video: rawvideo (RGB[24] / 0x18424752), rgb24, 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 1193200 kb/s, 23.98 fps, 23.98 tbn, 23.98 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      timecode        : 01:00:00:00
+      encoder         : Lavc58.35.100 rawvideo
+frame=  119 fps= 12 q=-0.0 Lsize=  722925kB time=00:00:04.96 bitrate=1193200.3kbits/s speed=0.498x
+video:722925kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.000000%
+(119, 1080, 1920, 3)
