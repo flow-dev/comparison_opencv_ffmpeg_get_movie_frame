@@ -3,7 +3,7 @@
 # -*- coding:utf-8 -*-
 
 """
-cv2_timeline.py
+comparison_opencv_ffmpeg_get_movie_frame.py
 """
 
 # conda install -c mrinaljain17 ffmpeg-python
@@ -15,7 +15,7 @@ __author__ = "flow_dev"
 import numpy as np
 import cv2
 import os
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import ffmpeg
 
 def ffmpeg_movie():
@@ -38,6 +38,7 @@ def ffmpeg_movie():
         .output('pipe:', format='rawvideo', pix_fmt='rgb24')
         .run(capture_stdout=True)
     )
+    
     # numpy配列で出力.
     video = (
         np
